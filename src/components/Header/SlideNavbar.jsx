@@ -10,7 +10,7 @@ export function SlideNavbar() {
                 <div className="position-sticky pt-3 sidebar-sticky">
                     <ul className="nav flex-column">
                         <li className="nav-item">
-                            <Link to={"/"} className="nav-link" aria-current="page" href="#">
+                            <Link to={"/Home"} className="nav-link" aria-current="page" href="#">
                                 <span className="align-text-bottom"><FaHome/></span>
                                 Dashboard
                             </Link>

@@ -1,6 +1,10 @@
 import {Link} from "react-router-dom";
+import {useContext} from "react";
+import {CartContext} from "../CartContext.jsx";
 
 export function NavBar() {
+    const {setUserR,setLoginUser,setToken} = useContext(CartContext)
+
     return (
         <>
 
@@ -15,7 +19,11 @@ export function NavBar() {
                        placeholder="Search" aria-label="Search"/>
                     <div className="navbar-nav">
                         <div className="nav-item text-nowrap">
-                            <a className="nav-link px-3" href="#">Sign out</a>
+                            <Link to={"/"} onClick={() =>{
+                                setUserR([])
+                                setLoginUser(false)
+                                setToken("")
+                            }} className="nav-link px-3" href="#">Sign out</Link>
                         </div>
                     </div>
             </header>
