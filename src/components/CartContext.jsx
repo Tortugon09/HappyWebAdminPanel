@@ -62,7 +62,7 @@ export const CartContext = createContext();
     //EJECUTE FOR THE REQUESTS
 
         const getShipping = async () => {
-            await axios.get("http://localhost:8080/shipping")
+            await axios.get("http://3.16.48.171:8080/shipping")
                 .then(({ data }) => setShipping(data.data));
         };
 
@@ -101,37 +101,36 @@ export const CartContext = createContext();
         // REQUEST FOR THE PRODUCTS
         const getProducts = async () => {
             await axios
-                .get("http://localhost:8080/product/list")
+                .get("http://3.16.48.171:8080/product/list")
                 .then(({ data }) => setProducts(data.data));
-
-
+            
         };
         //POST PRODUCT
     const addProduct = async (product) => {
         const { description,name, quantity, price,cakePicture } = product;
 
-        await axios.post("http://localhost:8080/product", { description ,name, price, quantity,cakePicture });
+        await axios.post("http://3.16.48.171:8080/product", { description ,name, price, quantity,cakePicture });
 
         getProducts();
     };
     const editProduct = async (product) => {
         const { id, description, name, quantity, price } = product;
         await axios
-            .put(`http://localhost:8080/product/${id}`, { description , name, price, quantity });
+            .put(`http://3.16.48.171:8080/product/${id}`, { description , name, price, quantity });
 
         getProducts();
     };
     const getproductId = async (product) => {
         const { id } = product;
         await axios
-            .get(`http://localhost:8080/product/${id}`)
+            .get(`http://3.16.48.171:8080/product/${id}`)
 
         getProducts();
     };
     const delateProduct = async (product) => {
         const { id } = product;
         await axios
-            .delete(`http://localhost:8080/product/${id}`)
+            .delete(`http://3.16.48.171:8080/product/${id}`)
 
         getProducts();
     };
@@ -140,12 +139,12 @@ export const CartContext = createContext();
         const login = async (user) => {
             const {email, password} = user
             await axios
-                .post("http://localhost:8080/login", {email,password})
+                .post("http://3.16.48.171:8080/login", {email,password})
                 .then( async(response) => {
                     setToken(response.headers['authorization'])
                     await axios({
                         method: 'get',
-                        url: `http://localhost:8080/client/findByEmail?email=${email}`,
+                        url: `http://3.16.48.171:8080/client/findByEmail?email=${email}`,
                         headers: {'Authorization': `${response.headers['authorization']}`}
                     }).then(function (response) {
                         console.log(response.data.data)
