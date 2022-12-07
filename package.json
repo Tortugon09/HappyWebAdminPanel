@@ -9,8 +9,29 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fontsource/roboto": "^4.5.8",
+    "@material-ui/core": "4.12.3",
+    "@mui/icons-material": "^5.10.16",
+    "@mui/material": "^5.10.16",
+    "@mui/styled-engine-sc": "^5.10.16",
+    "ag-charts-community": "^6.2.1",
+    "ag-charts-react": "^6.2.1",
+    "ag-grid-community": "^26.2.1",
+    "ag-grid-react": "^26.2.0",
+    "axios": "^1.2.0",
+    "bootstrap-icons": "^1.10.2",
+    "feather-icons": "^4.29.0",
+    "notistack": "^1.0.10",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-datepicker": "^4.8.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
+    "react-router": "^6.4.3",
+    "react-router-dom": "^6.4.3",
+    "styled-components": "^5.3.6",
+    "timeago.js": "^4.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
