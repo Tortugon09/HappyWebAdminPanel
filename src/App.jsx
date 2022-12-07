@@ -1,8 +1,5 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import {Home} from "./components/Layouts/Home";
-import {NavBar} from "./components/Header/NavBar";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Products} from "./components/Layouts/Products";
 import {CartProvider} from "./components/CartContext";
