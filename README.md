@@ -21,7 +21,7 @@ employees
  
  # Lenguajes
   Javascript, HTML5, CSS3
-  Dependencias:
+  Dependencies:
     -React
       -MaterialUI
       -StyledComponents
